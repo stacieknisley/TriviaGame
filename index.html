@@ -6,14 +6,42 @@
   <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-  <script src="assets/javascript/TriviaGame.js"></script>
+  <!-- <script src="assets/javascript/TriviaGame.js"></script> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
- 
+  <script src="assets/javascript/triviaGame.js"></script>
+
+          <!-- customize alert button -->
+            <!-- <script src="Scripts/jquery-1.4.1.js" type="text/javascript"/> -->
+            <!-- <script src="Scripts/jquery.alerts.js" type="text/javascript"/> -->
+            <!-- <link href="Styles/jquery.alerts.css" rel="stylesheet" type="text/css"/> -->
+
+          <!-- <script type= "text/javascript" language="javascript"> -->
+          <!-- $(document).ready(function () { -->
+          <!-- $("#Button").click(function () { -->
+          <!-- jAlert('Wow !My alert message with custom titile','My custom title bar here...'); -->
+            <!-- return false; -->
+            <!-- }); -->
+            <!-- }); -->
+           <!-- </script> -->
+
 </head>
 
  
 <body>
+
+
+<!-- <div id="show-number"></div> -->
+
+<div id="show-number"></div>
+
+<br>
+
+<button onClick="startbutton()">Click Here to Play Beatles Trivia!</button>
+<button id="stop">Stop</button> 
+<button id="resume">Resume</button> 
+
+
 
     <!-- <h6 class= "pagetitle"> Beatles Trivia Game Introduction</h6> -->
 
@@ -21,10 +49,8 @@
       <div class="centered"><h2>T  H  E   •   B  E  A  T  L  E  S   •   T  R  I  V  I  A   •   G  A  M  E<h/2></h></div>
         <img src="assets/images/Beatles_color.jpg" alt="Beatles" style="width:100%;">
         <div class="centered2"><h2>T  H  E   •   B  E  A  T  L  E  S   •   T  R  I  V  I  A   •   G  A  M  E<h/2></h></div>
-      <!-- <div class="bottom-left">Bottom Left</div> -->
-      <!-- <div class="top-left">Top Left</div> -->
-      <!-- <div class="top-right">Top Right</div> -->
-      <!-- <div class="bottom-right">Bottom Right</div> -->
+      
+ 
     
     </div>
 
@@ -35,8 +61,23 @@
       <!-- <h1 class="display-4">Trivia Game</h1> -->
       <p class="lead">Test your knowledge of the THE BEATLES</p>
       <hr class="my-4">
-      <p>Pick the correct answer for each question and see how many you can guess correctly in 2 minutes.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <p>Pick the correct answer for each question and see how many you can guess correctly in 3 minutes.</p>
+      <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Good Luck!</a> -->
+      <button type="button" class="btn btn-success">Good Luck!</button>
+      <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Click Here to Start</a> -->
+      <!-- <button type="startbutton" class="btn btn-primary">Click Here to Start</button> -->
+
+      
+      <!-- trying to get my buttons to on click a response -->
+      <!-- trying to get the timer to work in js file?? -->
+      <!-- <button onclick="myVar = setTimeout(myFunction, 120000)">Try it</button> -->
+
+      <!-- <button onclick="clearTimeout(myVar)">Stop it</button> -->
+      
+      <!-- <script> -->
+     
+
+
     </div>
 
 
@@ -44,7 +85,7 @@
 <!-- pseudo code
 Bootstrap boxes for questions -->
 
-<!--1. What year did the Beatles come to America?  1970, 1964, 1959, 1962     1964
+<!--1. What year did the Beatles first come to America?  1970, 1964, 1959, 1962     1964
     2. What city in Germany did the Beatles get their start?  Frankfurt, Berlin, Hamburg, Struttgart    Hamburg
     3. Which of these was NOT one a Beatles band name? Quarryman, Silver Beetles, Beach Boys, Beat Boys    Beach Boys    
     4. Which Beatle crossed Abbey Road first? Paul John George Ringo    John
@@ -57,81 +98,144 @@ Bootstrap boxes for questions -->
      -->
 
      <!-- 1. -->
+<div class="col-md-12 center block"> 
     <div class="alert alert-primary" role="alert">
-      1 • What year did the Beatles come to America? <a href="#" class="alert-link">1970, 1964, 1959, 1962</a>. Give it a click if you like.
+      1 • What year did the Beatles first come to America? 
+      <!-- <a href="#" class="alert-link">1970, 1964, 1959, 1962</a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">1970</button>
+      <button type="button" class="btn btn-outline-success">1964</button>
+      <button type="button" class="btn btn-outline-primary">1959</button>
+      <button type="button" class="btn btn-outline-success">1962</button>
+    
     </div>
+
+<!-- create click on buttons for each  of the 4 options/selections
+      create true  === true  and then
+        if else statements for each option 
+      how to calculate after game is completed????
+      
+      -->
+
+
     <!-- 2. -->
-    <div class="alert alert-secondary" role="alert">
-      2 • What city in Germany did the Beatles get their start? <a href="#" class="alert-link">Frankfurt, Berlin, Hamburg, Struttgart</a>. Give it a click if you like.
+
+    <div class="alert alert-success" role="alert">
+      2 • What city in Germany did the Beatles get their start? 
+        <!-- <a href="#" class="alert-link">Frankfurt, Berlin, Hamburg, Struttgart</a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">Frankfurt</button>
+      <button type="button" class="btn btn-outline-success">Berlin</button>
+      <button type="button" class="btn btn-outline-primary">Hamburg</button>
+      <button type="button" class="btn btn-outline-success">Struttgart</button>
+    
     </div>
      <!-- 3. -->
-    <div class="alert alert-success" role="alert">
-      3 • Which of these was NOT one a Beatles band name? <a href="#" class="alert-link">Quarryman, Silver Beetles, Beach Boys, Beat Boys</a>. Give it a click if you like.
+
+    <div class="alert alert-primary" role="alert">
+      3 • Which of these was NOT one a Beatles band name? 
+      <!-- <a href="#" class="alert-link">Quarryman, Silver Beetles, Beach Boys, Beat Boys</a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">Quarryman</button>
+      <button type="button" class="btn btn-outline-success">Silver Beetles</button>
+      <button type="button" class="btn btn-outline-primary">Beach Boys</button>
+      <button type="button" class="btn btn-outline-success">Beat Boys</button>
+    
     </div>
      <!-- 4. -->
-    <div class="alert alert-danger" role="alert">
-      4 • Which Beatle crossed Abbey Road first? <a href="#" class="alert-link">Paul John George Ringo </a>. Give it a click if you like.
+    <div class="alert alert-success" role="alert">
+      4 • Which Beatle crossed Abbey Road first? 
+      <!-- <a href="#" class="alert-link">Paul John George Ringo </a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">Paul</button>
+      <button type="button" class="btn btn-outline-success">John</button>
+      <button type="button" class="btn btn-outline-primary">George</button>
+      <button type="button" class="btn btn-outline-success">Ringo</button>
+    
     </div>
      <!-- 5. -->
-    <div class="alert alert-warning" role="alert">
-      5 • Who was the original drummer for the Beatles? <a href="#" class="alert-link">Ringo Starr, Stuart Sutcliffe, Bill Wyman, Pete Best</a>. Give it a click if you like.
+    <div class="alert alert-primary" role="alert">
+      5 • Who was the original drummer for the Beatles? 
+      <!-- <a href="#" class="alert-link">Ringo Starr, Stuart Sutcliffe, Bill Wyman, Pete Best</a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">Ringo Starr</button>
+      <button type="button" class="btn btn-outline-success">Stuart Sutcliffe</button>
+      <button type="button" class="btn btn-outline-primary">Bill Wyman</button>
+      <button type="button" class="btn btn-outline-success">Pete Best</button>
+    
     </div>
      <!-- 6. -->
-    <div class="alert alert-info" role="alert">
-      6 •  Which of these bands did a Beatles band member start after the Beatles broke up? <a href="#" class="alert-link">Wings, Traveling Wilburys, Plastic Ono Band,  All Three</a>. Give it a click if you like.
+    <div class="alert alert-success" role="alert">
+      6 •  Which of these bands did a Beatles band member start after the Beatles broke up? 
+      <!-- <a href="#" class="alert-link">Wings, Traveling Wilburys, Plastic Ono Band,  All Three</a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">Wings</button>
+      <button type="button" class="btn btn-outline-success">Traveling Wilburys</button>
+      <button type="button" class="btn btn-outline-primary">Plastic Ono Band</button>
+      <button type="button" class="btn btn-outline-success">All Three</button>
+    
     </div>
      <!-- 7. -->
-    <div class="alert alert-light" role="alert">
-      7 • Where were the Beatles originally established?<a href="#" class="alert-link"> London, Liverpool, Manchester, Lancashire</a>. Give it a click if you like.
+    <div class="alert alert-primary" role="alert">
+      7 • Where were the Beatles originally established?
+      <!-- <a href="#" class="alert-link"> London, Liverpool, Manchester, Lancashire</a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">London</button>
+      <button type="button" class="btn btn-outline-success">Liverpool</button>
+      <button type="button" class="btn btn-outline-primary">Manchester</button>
+      <button type="button" class="btn btn-outline-success">Lancashire</button>
+    
     </div>
      <!-- 8. -->
-    <div class="alert alert-dark" role="alert">
-       8 •  What record label was founded by the Beatles? <a href="#" class="alert-link">Apple Records,  Parlophone,  EMI, Liverpool Records</a>. Give it a click if you like.
-    </div>
-     <!-- 9. -->
-    <div class="alert alert-warning" role="alert">
-      9 • What was the Beatles first single record? <a href="#" class="alert-link">Love Me Do, I Saw Her Standing There, Please Please Me, Twist and Shout</a>. Give it a click if you like.
-    </div>
+    <div class="alert alert-success" role="alert">
+       8 •  What record label was founded by the Beatles?
+       <!-- <a href="#" class="alert-link">Apple Records,  Parlophone,  EMI, Liverpool Records</a>. Give it a click if you like. -->
+       <br>
+       <button type="button" class="btn btn-outline-primary">Apple Records</button>
+       <button type="button" class="btn btn-outline-success">Parlophone</button>
+       <button type="button" class="btn btn-outline-primary">EMI</button>
+       <button type="button" class="btn btn-outline-success">Liverpool Records</button>
+      </div>
+
+
+      <!-- 9. -->
+      <div class="alert alert-primary" role="alert">
+       9 • Which Beatles song contains French lyrics? 
+       <!-- <a href="#" class="alert-link">I Am the Walrus, Helter Skelter, Michelle, Help</a>. Give it a click if you like. -->
+       <br>
+       <button type="button" class="btn btn-outline-primary">I Am the Walrus</button>
+       <button type="button" class="btn btn-outline-success">Helter Skelter</button>
+       <button type="button" class="btn btn-outline-primary">Michelle</button>
+       <button type="button" class="btn btn-outline-success">Help</button>
+     
+     </div>
+
      <!-- 10. -->
-    <div class="alert alert-info" role="alert">
-      10 • Which Beatles song contains French lyrics? <a href="#" class="alert-link">I Am the Walrus, Helter Skelter, Michelle, Help</a>. Give it a click if you like.
-    </div>
+    <div class="alert alert-success" role="alert">
+      10 • What was the Beatles first single record? 
+      <!-- <a href="#" class="alert-link">Love Me Do, I Saw Her Standing There, Please Please Me, Twist and Shout</a>. Give it a click if you like. -->
+      <br>
+      <button type="button" class="btn btn-outline-primary">Love Me Do</button>
+      <button type="button" class="btn btn-outline-success">I Saw Her Standing There</button>
+      <button type="button" class="btn btn-outline-primary">Please Please Me</button>
+      <button type="button" class="btn btn-outline-success">Twist and Shout</button>
     
+    </div>
+
+
+</div>
+
+<!-- <div class="col-md-12 text-center">  -->
+<!-- <button type="button" id="btn btn-primary">Get Score!</button> -->
+<!-- </div> -->
+
+    <div class="col-md-12 text-center"> 
+    <button type="button" class="btn btn-primary">Click the Button in the Upper Left Corner of this page to start game.</button>
+    
+    </div>
 
 
 
-      <!-- <h1> Number to Guess: </h1> -->
-
-      <!-- <p id="result">  </p> -->
-      <!-- <p id="win"></p> -->
-      <!-- <p id="lost"></p> -->
-      <!-- <p id="previous" ></p> -->
-      <!-- <div class="crystals">  </div> -->
-
-
- <!-- buttons -->
-
-<!-- <div id="button_blue">
-      <img id="blue" src="assets/images/blue.jpg" alt="blue crystal"/>
- </div>
-
- <div id="button_green">
-      <img id="green" src="assets/images/green.jpg" alt="green crystal"/> 
- </div>   
-
- <div id="button_red">  
-      <img id="red"  src="assets/images/red.jpg" alt="red crystal"/>  
- </div> 
-
- <div id="button_yellow"> 
-      <img id="yellow" src="assets/images/yellow.jpg" alt="yellow crystal"/>   
- </div> -->
-
-
-
-
-          <!-- JAVASCRIPT  -->
- <!-- ========================================= -->
   
 
 
