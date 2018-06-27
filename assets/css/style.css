@@ -1,23 +1,16 @@
-
-
-/* 
-<style>
-<background> <img src="assets/images/musical-light-notes-background.jpg.jpg" alt="musical notes" style="width:100% 100%;"></background>
-</style> */
-/* body  {  */
+ /* body  {  */
        /* background: linear-gradient (blue, purple); */
       /* background: linear-gradient(red, yellow); */
     /* background-image: url("./assets/images/quartzcorchia2.jpg"); */
     /* background-repeat: no-repeat; */
     /* color:white; */
-
     /* } */
 
-/* body {
+body {
 
       background: linear-gradient(to right, purple , yellow);
       /* background-color: lightblue; */
-  /* }
+  }
 
 .display-4 {
       font-family: "Fantasy", "Comid Sans MS", serif;
@@ -29,13 +22,13 @@
   font-family: "Fantasy",  Arial, sans-serif;
 
 
-} */
+}
 
-/* .centered2 {
+.centered2 {
       font-family: "Fantasy",  Arial, sans-serif;
-      text-align: right; */
+      text-align: right;
     
-
+}
 /* .subhead { */
 
       /* text-align: center; */

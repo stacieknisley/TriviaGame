@@ -1,62 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset- "UTF-8">
-  <title>Button Triggered AJAX</title>
-  <link href="assets/css/style.css" rel="stylesheet"> 
+  <meta charset-"UTF-8">
+  <title>BeatlesTriviaGame</title>
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-    crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="assets/javascript/gifTastic.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <!-- <script src="assets/javascript/TriviaGame.js"></script> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+  <script src="assets/javascript/triviaGame.js"></script>
 
-  <!-- giphykey -->
-  <!-- 8Jaon0lnqL45mbSJUDqgV8WgFfy2DQ8E -->
-  <!-- https://api.giphy.com/v1/gifs/search?api_key=8Jaon0lnqL45mbSJUDqgV8WgFfy2DQ8E&q=musical instruments&limit=25&offset=0&rating=G&lang=en -->
+          <!-- customize alert button -->
+            <!-- <script src="Scripts/jquery-1.4.1.js" type="text/javascript"/> -->
+            <!-- <script src="Scripts/jquery.alerts.js" type="text/javascript"/> -->
+            <!-- <link href="Styles/jquery.alerts.css" rel="stylesheet" type="text/css"/> -->
+            
+          <!-- <script type= "text/javascript" language="javascript"> -->
+          <!-- $(document).ready(function () { -->
+          <!-- $("#Button").click(function () { -->
+          <!-- jAlert('Wow !My alert message with custom titile','My custom title bar here...'); -->
+            <!-- return false; -->
+            <!-- }); -->
+            <!-- }); -->
+           <!-- </script> -->
+
 </head>
 
-<body style= "background:linear-gradient(to right, green, black) ">
-<!-- linear-gradient(blue, black)"> -->
-<div class="container">
-  <button data-search="Drum">Drum</button>
-  <!-- added data search so when a button is clicked I can indicated what button is clicked and only the data for a specific instrument is pulled from the API -->
-  <button data-search="Violin">Violin</button>
-  <button data-search="Guitar">Guitar</button>
-  <button data-search="Saxaphone">Saxophone</button>
-  <button data-search="Piano">Piano</button>
-  <button data-search="Banjo">Banjo</button>
+ 
+<body>
 
 
-  <!-- comment out some examples of possible more instruments -->
-  <!-- <button data-search="Horn">Horn</button> -->
-  <!-- <button data-search="Cello">Cello</button> -->
-  <!-- <button data-search="Bass">Bass</button> -->
-  <!-- <button data-search="Trombone">Trombone</button> -->
-  <!-- <button data-search="Flute">Flute</button> -->
-  <!-- <button data-search="Cymbol">Cymbol</button> -->
-  <!-- <button data-search="Maracas">Maracas</button> -->
+<!-- <div id="show-number"></div> -->
+
+<div id="show-number"></div>
 
 <br>
-<br>
-<!-- add a box to add additional instruments -->
-  <div class="float-right">
-      <form action="">
-      <input class="form-control" type="text" placeholder="Add an Instrument">
-      <button type="submit" class="btn btn-primary">Submit</button>
-  </div><br>
-    <!-- Float right on all viewport sizes</div><br> -->
-  <!-- <input class="form-control" type="text" placeholder="Add an Instrument"> -->
+
+<!-- <button id="startbutton">Click Here to Play Beatles Trivia!</button> -->
+<!-- <h1>TIMER: </h1><label id="counter"></label> -->
+<!-- <button id="stop">Stop</button>  -->
+<!-- <button id="resume">Resume</button>  -->
 
 
-  <div id="GIFArea"></div>
+
+    <!-- <h6 class= "pagetitle"> Beatles Trivia Game Introduction</h6> -->
+
+    <div class="container">
+      <div class="centered"><h2>T  H  E   •   B  E  A  T  L  E  S   •   T  R  I  V  I  A   •   G  A  M  E<h/2></h></div>
+        <img src="assets/images/Beatles_color.jpg" alt="Beatles" style="width:100%;">
+        <div class="centered2"><h2>T  H  E   •   B  E  A  T  L  E  S   •   T  R  I  V  I  A   •   G  A  M  E<h/2></h></div>
+      
+ 
+    
+    </div>
+
+
+    <label id="test"></label>
+
+    <!-- <h2 class="subhead"> Trivia </h2> -->
+
+    <div class="jumbotron">
+      <!-- <h1 class="display-4">Trivia Game</h1> -->
+      <p class="lead">Test your knowledge of the THE BEATLES</p>
+      <hr class="my-4">
+      <p>Pick the correct answer for each question and see how many you can guess correctly in 3 minutes.</p>
+      <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Good Luck!</a> -->
+      <button type="button" class="btn btn-success">Good Luck!</button>
+      <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Click Here to Start</a> -->
+      <!-- <button type="startbutton" class="btn btn-primary">Click Here to Start</button> -->
+      <!-- trying to get my buttons to on click a response -->
+      <!-- trying to get the timer to work in js file?? -->
+      <!-- <button onclick="myVar = setTimeout(myFunction, 120000)">Try it</button> -->
+      <!-- <button onclick="clearTimeout(myVar)">Stop it</button> -->
+      <!-- <script> -->
+<!--  -->
+<!-- <button id="startbutton"><button type="radio btn-outline-primary"><class="btn btn-success"></class>Click Here to Play Beatles Trivia!</button> -->
+<!-- <p><b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become unchecked.</p> -->
+<button type="button" class="btn btn-outline-dark" id= "startGame">Click Here to Play Beatles Trivia!</button>
+
+<!-- <h1>TIMER: <label id="counter"></label></h1> -->
+<p>TIMER: <label id="counter"></label></p>
+<!-- <button id="stop">Stop</button>  -->
+<!-- <button id="resume">Resume</button>  -->
+
+<button type="button" class="btn btn-outline-success" id="finalScore">Final Score</button>
+<h1>Correct Answers: <label id="right"></label></h1>
+<h1>Wrong Answers: <label id="wrong"></label></h1>     
+
+
+    </div>
+
+
+
+<!-- pseudo code
+Bootstrap boxes for questions -->
+
+<!--1. What year did the Beatles first come to America?  1970, 1964, 1959, 1962     1964
+    2. What city in Germany did the Beatles get their start?  Frankfurt, Berlin, Hamburg, Struttgart    Hamburg
+    3. Which of these was NOT one a Beatles band name? Quarryman, Silver Beetles, Beach Boys, Beat Boys    Beach Boys    
+    4. Which Beatle crossed Abbey Road first? Paul John George Ringo    John
+    5. Who was the original drummer for the Beatles? Ringo Starr, Stuart Sutcliffe, Bill Wyman, Pete Best    Pete Best
+    6. Which of these bands did a Beatles band member start after the Beatles broke up? Wings, Traveling Wilburys, Plastic Ono Band,  All Three     All Three             
+    7. Where were the Beatles originally established?  London, Liverpool, Manchester, Lancashire    Liverpool
+    8. What record label was founded by the Beatles?  Apple Records,  Parlophone,  EMI, Liverpool Records     Apple Records
+    9.Which Beatles song contains French lyrics?  I Am the Walrus, Helter Skelter, Michelle, Help     Michelle
+    10. What was the Beatles first single record? Love Me Do, I Saw Her Standing There, Please Please Me, Twist and Shout    Love Me Do
+    
+     -->
+
+     <!-- 1. -->
+<div class="col-md-12 center block"> 
+    <div class="alert alert-primary" role="alert">
+      <p> 1 • What year did the Beatles first come to America?  </p> 
+
+            <!-- <button type="radio btn-outline-primary">1970</button> -->
+            <input type="radio" name="q1" value="q1_a1">  1970 &emsp; &emsp;
+            <!-- <button type="button" class="btn btn-outline-primary">1964</button> -->
+            <input type="radio" name="q1" value="q1_a2">   1964 &emsp; &emsp;
+            <!-- <button type="button" class="btn btn-outline-primary">1959</button> -->
+            <input type="radio" name="q1" value="q1_a3">  1959 &emsp; &emsp;
+            <!-- <button type="button" class="btn btn-outline-primary">1962</button> -->
+            <input type="radio" name="q1" value="q1_a4">  1962 &emsp; &emsp;
+      <!-- <a href="#" class="alert-link">1970, 1964, 1959, 1962</a>. Give it a click if you like. -->
+      <!-- <input type="radio" name="q1" value="q1_a1"> 1970 -->
+      
+      <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+        </label>
+      </div> -->
+
+      
+      <!-- <input type="radio" name="q1" value="q1_a1"> 1970<br> -->
+      <!-- <input type="radio" name="q1" value="q1_a2"> 1964<br> -->
+      <!-- <input type="radio" name="q1" value="q1_a3"> 1959<br/> -->
+      
+     <!-- <p> What year jhbgfedcftyhujikol98ik7ujhygtfrde -->
+      <!-- <input type="radio" name="q2" value="q2_a1"> 19cdf70<br> -->
+      <!-- <input type="radio" name="q2" value="q2_a2"> 19cfd64<br> -->
+      <!-- <input type="radio" name="q2" value="q2_a3"> 19gt59<br/> -->
+    
+    </div>
+
+<!-- create click on buttons for each  of the 4 options/selections
+      create true  === true  and then
+        if else statements for each option 
+      how to calculate after game is completed????
+         -->
+
+    <!-- 2. -->
+
+    <div class="alert alert-success" role="alert">
+      <p>2 • What city in Germany did the Beatles get their start? </p>
+        <!-- <a href="#" class="alert-link">Frankfurt, Berlin, Hamburg, Struttgart</a>. Give it a click if you like. -->
+     
+      <input type="radio" name="q2" value="q2_a1">  Frankfurt   &emsp; &emsp;
+      <input type="radio" name="q2" value="q2_a2">  Berlin  &emsp; &emsp;
+      <input type="radio" name="q2" value="q2_a3">  Hamburg   &emsp; &emsp;
+      <input type="radio" name="q2" value="q2_a4">  Struttgart   &emsp; &emsp;
+
+      <!-- <button type="button" class="btn btn-outline-primary">Frankfurt</button>
+      <button type="button" class="btn btn-outline-success">Berlin</button>
+      <button type="button" class="btn btn-outline-primary">Hamburg</button>
+      <button type="button" class="btn btn-outline-success">Struttgart</button> -->
+    
+    </div>
+     <!-- 3. -->
+
+    <div class="alert alert-primary" role="alert">
+      <p>3 • Which of these was NOT one a Beatles band name? </p>
+      <!-- <a href="#" class="alert-link">Quarryman, Silver Beetles, Beach Boys, Beat Boys</a>. Give it a click if you like. -->
+      <input type="radio" name="q3" value="q3_a1">  Quarryman   &emsp; &emsp;
+      <input type="radio" name="q3" value="q3_a2">  Silver Beetles   &emsp; &emsp;
+      <input type="radio" name="q3" value="q3_a3">  Beach Boys   &emsp; &emsp;
+      <input type="radio" name="q3" value="q3_a4">  Beat Boys   &emsp; &emsp;
+      <!-- <button type="button" class="btn btn-outline-primary">Quarryman</button>
+      <button type="button" class="btn btn-outline-success">Silver Beetles</button>
+      <button type="button" class="btn btn-outline-primary">Beach Boys</button>
+      <button type="button" class="btn btn-outline-success">Beat Boys</button> -->
+    
+    </div>
+     <!-- 4. -->
+    <div class="alert alert-success" role="alert">
+      <p>4 • Which Beatle crossed Abbey Road first? </p>
+      <!-- <a href="#" class="alert-link">Paul John George Ringo </a>. Give it a click if you like. -->
+      
+      <input type="radio" name="q4" value="q4_a1">  Paul  &emsp; &emsp;
+      <input type="radio" name="q4" value="q4_a2">  John  &emsp; &emsp;
+      <input type="radio" name="q4" value="q4_a3">  George  &emsp; &emsp;
+      <input type="radio" name="q4" value="q4_a4">  Ringo  &emsp; &emsp;
+
+      <!-- <button type="button" class="btn btn-outline-primary">Paul</button>
+      <button type="button" class="btn btn-outline-success">John</button>
+      <button type="button" class="btn btn-outline-primary">George</button>
+      <button type="button" class="btn btn-outline-success">Ringo</button> -->
+    
+    </div>
+     <!-- 5. -->
+    <div class="alert alert-primary" role="alert">
+      <p> 5 • Who was the original drummer for the Beatles? </p>
+      <!-- <a href="#" class="alert-link">Ringo Starr, Stuart Sutcliffe, Bill Wyman, Pete Best</a>. Give it a click if you like. -->
+      
+      <input type="radio" name="q5" value="q5_a1">  Ringo Starr  &emsp; &emsp;
+      <input type="radio" name="q5" value="q5_a2">  Stuart Sutcliffe  &emsp; &emsp;
+      <input type="radio" name="q5" value="q5_a3">  Bill Wyman  &emsp; &emsp;
+      <input type="radio" name="q5" value="q5_a4">  Pete Best &emsp; &emsp;
+    
+    </div>
+     <!-- 6. -->
+    <div class="alert alert-success" role="alert">
+      <p>6 •  Which of these bands did a Beatles band member start after the Beatles broke up?</p> 
+      <!-- <a href="#" class="alert-link">Wings, Traveling Wilburys, Plastic Ono Band,  All Three</a>. Give it a click if you like. -->
+      
+      <input type="radio" name="q6" value="q6_a1">  Wings  &emsp; &emsp;
+      <input type="radio" name="q6" value="q6_a2">  Traveling Wilburys  &emsp; &emsp;
+      <input type="radio" name="q6" value="q6_a3">  Plastic Ono Band  &emsp; &emsp;
+      <input type="radio" name="q6" value="q6_a4">  All Three &emsp; &emsp;
+    
+    </div>
+     <!-- 7. -->
+    <div class="alert alert-primary" role="alert">
+      <p>7 • Where were the Beatles originally established?</p>
+      <!-- <a href="#" class="alert-link"> London, Liverpool, Manchester, Lancashire</a>. Give it a click if you like. -->
+    
+      <input type="radio" name="q7" value="q7_a1">  London  &emsp; &emsp;
+      <input type="radio" name="q7" value="q7_a2">  Liverpool  &emsp; &emsp;
+      <input type="radio" name="q7" value="q7_a3">  Manchester  &emsp; &emsp;
+      <input type="radio" name="q7" value="q7_a4">  Lancashire &emsp; &emsp;
+    
+    </div>
+     <!-- 8. -->
+    <div class="alert alert-success" role="alert">
+       <p>8 •  What record label was founded by the Beatles?</p>
+       <!-- <a href="#" class="alert-link">Apple Records,  Parlophone,  EMI, Liverpool Records</a>. Give it a click if you like. -->
+      
+       <input type="radio" name="q8" value="q8_a1">  Apple Records  &emsp; &emsp;
+       <input type="radio" name="q8" value="q8_a2">  Parlophone  &emsp; &emsp;
+       <input type="radio" name="q8" value="q8_a3">  EMI  &emsp; &emsp;
+       <input type="radio" name="q8" value="q8_a4">  Liverpool Records &emsp; &emsp;
+
+      </div>
+
+
+      <!-- 9. -->
+      <div class="alert alert-primary" role="alert">
+       <p>9 • Which Beatles song contains French lyrics?</p> 
+       <!-- <a href="#" class="alert-link">I Am the Walrus, Helter Skelter, Michelle, Help</a>. Give it a click if you like. -->
+       <input type="radio" name="q9" value="q9_a1">  I Am the Walrus  &emsp; &emsp;
+       <input type="radio" name="q9" value="q9_a2">  Helter Skelter  &emsp; &emsp;
+       <input type="radio" name="q9" value="q9_a3">  Michelle  &emsp; &emsp;
+       <input type="radio" name="q9" value="q9_a4">  Help &emsp; &emsp;
+
+     
+     </div>
+
+     <!-- 10. -->
+    <div class="alert alert-success" role="alert">
+      <p>10 • What was the Beatles first single record?</p> 
+      <!-- <a href="#" class="alert-link">Love Me Do, I Saw Her Standing There, Please Please Me, Twist and Shout</a>. Give it a click if you like. -->
+     
+      <input type="radio" name="q10" value="q10_a1">  Love Me Do &emsp; &emsp;
+      <input type="radio" name="q10" value="q10_a2">  I Saw Her Standing There  &emsp; &emsp;
+      <input type="radio" name="q10" value="q10_a3">  Please Please Me  &emsp; &emsp;
+      <input type="radio" name="q10" value="q10_a4">  Twist and Shout &emsp; &emsp;
+    
+    </div>
+
 
 </div>
 
+<!-- <div class="col-md-12 text-center">  -->
+<!-- <button type="button" id="btn btn-primary">Get Score!</button> -->
+<!-- </div> -->
 
- 
+    <div class="col-md-12 text-center"> 
+    <button type="button" class="btn btn-primary">Click here to calculate your score.</button>
+    
+    </div>
 
+
+
+  
+
+
+
+
+  
 </body>
-
 </html>

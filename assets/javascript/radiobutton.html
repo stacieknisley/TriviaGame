@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+	
+   <p> What year did the Beatles first come to America</p>
+  <input type="radio" name="q1" value="q1_a1"> 1970<br>
+  <input type="radio" name="q1" value="q1_a2"> 1964<br>
+  <input type="radio" name="q1" value="q1_a3"> 1959<br/>
+  
+   <p> What year jhbgfedcftyhujikol98ik7ujhygtfrde
+  <input type="radio" name="q2" value="q2_a1"> 19cdf70<br>
+  <input type="radio" name="q2" value="q2_a2"> 19cfd64<br>
+  <input type="radio" name="q2" value="q2_a3"> 19gt59<br/>
+  
+  <input type="text" id="abc">
+  var textData = $("#abc").val();
+  
+  var checkQ1 = $("input[name='q1']:checked").val(); //q1_a1
+  
+  var checkQ2 = $("input[name='q2']:checked").val();//q2_a2
+  
+  var rightAns = ["q1_a2","q2_a3","q3_a1"]
+  var userAns = [checkQ1,checkQ2...]
+  userAns["q1_a3","q2_a1"]
+  
+  for(var i=0;i<rightAns.length;i++){
+  	if(rightAns[i] === userAns[i]){
+    	correctAns++;
+    }
+    else{
+    	wrongAns++;
+    }
+  }
+
+<p><b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become unchecked.</p>
+
+</body>
+</html>
